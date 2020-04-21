@@ -61,15 +61,15 @@ jobs:
       os: Linux
 
 # All tasks on macOS
-- job: build_all_darwin
-  displayName: Build all tasks (macOS)
-  condition: and(succeeded(), not(variables.task), eq(variables.os, 'Darwin'))
-  pool:
-    vmImage: macos-10.15
-  steps:
-  - template: ci/build-all-steps.yml
-    parameters:
-      os: Darwin
+# - job: build_all_darwin
+#  displayName: Build all tasks (macOS)
+##  condition: and(succeeded(), not(variables.task), eq(variables.os, 'Darwin'))
+#  pool:
+#    vmImage: macos-10.15
+#  steps:
+#  - template: ci/build-all-steps.yml
+#    parameters:
+#      os: Darwin
 
 # Single task
 - job: buildSingle
